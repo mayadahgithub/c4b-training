@@ -1,11 +1,33 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+     صفحة الادخال 
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
 
+    <ion-item>
+      <ion-label floating>اسم المستخدم </ion-label>
+      <ion-input type="text"[(ngModel)]="name"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>المهنة </ion-label>
+      <ion-input type="text"[(ngModel)]="job"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>المنطقة  </ion-label>
+      <ion-input type="text" [(ngModel)]="area"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>رقم الهاتف  </ion-label>
+      <ion-input type="number"[(ngModel)]="phoneNumber"></ion-input>
+    </ion-item>
+   
+  
+  </ion-list>
+  <button ion-button color="secondary" block (click)="save(name , job , area, phoneNumber)">حفظ </button>
 </ion-content>
