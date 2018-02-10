@@ -1,5 +1,5 @@
 <!--
-  Generated template for the RegiterPage page.
+  Generated template for the LoginPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>regiter</ion-title>
+    <ion-title>تسجيل الدخول </ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,8 +17,8 @@
   <ion-list>
 
     <ion-item>
-      <ion-label fixed>الايميل</ion-label>
-      <ion-input type="text" value="" [(ngModel)]="email"></ion-input>
+      <ion-label fixed>الايميل </ion-label>
+      <ion-input type="text" value=""[(ngModel)]="email"></ion-input>
     </ion-item>
   
     <ion-item>
@@ -27,5 +27,5 @@
     </ion-item>
   
   </ion-list>
-  <button ion-button block color="secondary" (click)="register()">تسجيل </button>
+  <button ion-button block (click)="login()"> تسجيل دخول </button>
 </ion-content>

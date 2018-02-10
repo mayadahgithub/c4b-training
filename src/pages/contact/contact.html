@@ -1,17 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+     auth
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content padding >
+  <ion-item *ngIf="signin">
+  <button ion-button block color="secondary" (click)="logOut()" >تسجيل خروج  </button>
+</ion-item>
+<ion-item *ngIf="ifSignOut">
+    <button ion-button block color="parimary" (click)="loginPage()" >تسجيل دخول </button>
+    <button ion-button block color="danger" (click)="registerPgae()">تسجيل حساب جديد</button>
+</ion-item>
 </ion-content>

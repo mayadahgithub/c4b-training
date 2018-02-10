@@ -1,3 +1,4 @@
+
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -7,12 +8,16 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { RegiterPage } from './../pages/regiter/regiter';
+import { UpdateDatePage } from './../pages/update-date/update-date';
 
+
+import { AngularFireAuth } from 'angularfire2/auth';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireDatabaseModule , AngularFireDatabase ,AngularFireList } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
-
+import {LoginPage} from '../pages/login/login';
 var config = {
   apiKey: "AIzaSyAlM3uKu94TWJVOnUtNtR9K8pO_OBMEews",
   authDomain: "c4b-project.firebaseapp.com",
@@ -28,7 +33,10 @@ var config = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegiterPage,
+    UpdateDatePage
   ],
   imports: [
     AngularFireDatabaseModule,
@@ -44,10 +52,13 @@ var config = {
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegiterPage,
+    UpdateDatePage
   ],
   providers: [
-    
+    AngularFireAuth,
     AngularFireDatabase,
     StatusBar,
     SplashScreen,
